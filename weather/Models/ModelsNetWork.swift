@@ -29,7 +29,7 @@ extension ProvinceModel {
                 cityArr.addObject(tempCityArr)
             }
             
-            dispatch_async(dispatch_get_main_queue(), { 
+            dispatch_async(dispatch_get_main_queue(), {
                 callBack(proArray: proArr as [AnyObject], cityArray: cityArr as [AnyObject])
             })
             
@@ -41,11 +41,40 @@ extension ProvinceModel {
     }
 }
 
-
-
+// MARK: - 笑话的网络请求
+extension JokeTextModel{
+    class func requestJokeData(httpUrl: String, httpArg: String,callBack:(jokeData:[AnyObject]?, error:NSError?)->Void) -> Void {
+        let req = NSMutableURLRequest(URL: NSURL(string: httpUrl + "?" + httpArg)!)
+        req.timeoutInterval = 6
+        req.HTTPMethod = "GET"
+        req.addValue(apikey, forHTTPHeaderField: "apikey")
+        NSURLConnection.sendAsynchronousRequest(req, queue: NSOperationQueue.mainQueue()) {
+            (response, data, error) -> Void in
+            if let d = data {
+                //let content = NSString(data: d, encoding: NSUTF8StringEncoding)
+                //print(content)
+                let models = NSMutableArray()
+                let dic = try! NSJSONSerialization.JSONObjectWithData(d, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                let array = (dic["showapi_res_body"] as! NSDictionary)["contentlist"] as! NSArray
+                
+                if array.count > 0 {
+                    for dict in array{
+                        models.addObject(JokeTextModel.createModel(dict as! [String: AnyObject]))
+                    }
+                }
+                dispatch_async(dispatch_get_main_queue(), {
+                    callBack(jokeData: models as [AnyObject], error: nil)
+                })
+                
+            }else{
+                dispatch_async(dispatch_get_main_queue(), {
+                    callBack(jokeData: nil, error: error)
+                })
+            }
+        }
+    }
     
-
-
+}
 
 
 

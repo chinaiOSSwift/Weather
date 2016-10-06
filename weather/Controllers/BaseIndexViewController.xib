@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseIndexViewController" customModule="weather" customModuleProvider="target">
+            <connections>
+                <outlet property="detailL" destination="meB-Gp-K3Y" id="1M5-KF-IL5"/>
+                <outlet property="indexL" destination="5Gs-ga-Ls4" id="sjw-Xg-s3s"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="指数:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceq-ri-FpZ">
+                    <rect key="frame" x="20" y="92" width="39" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="CWS-mn-XJV"/>
+                        <constraint firstAttribute="width" constant="42" id="H9s-0S-xxH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="H9s-0S-xxH"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可以" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gs-ga-Ls4">
+                    <rect key="frame" x="80" y="63" width="100" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="gO8-xb-Czd"/>
+                        <constraint firstAttribute="width" constant="100" id="uiv-K5-hKv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="建议:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhf-yg-amE">
+                    <rect key="frame" x="20" y="143" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="DAE-j6-9aT"/>
+                        <constraint firstAttribute="width" constant="42" id="Knn-Ia-hhi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="详情" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meB-Gp-K3Y">
+                    <rect key="frame" x="72" y="142" width="518" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="i07-br-pBH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ceq-ri-FpZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="4HC-gZ-Owz"/>
+                <constraint firstItem="nhf-yg-amE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="5je-X5-Rnx"/>
+                <constraint firstItem="5Gs-ga-Ls4" firstAttribute="centerX" secondItem="ceq-ri-FpZ" secondAttribute="centerX" id="6ww-EM-8NR"/>
+                <constraint firstItem="meB-Gp-K3Y" firstAttribute="leading" secondItem="nhf-yg-amE" secondAttribute="trailing" constant="10" id="GXv-MI-bpr"/>
+                <constraint firstItem="5Gs-ga-Ls4" firstAttribute="leading" secondItem="ceq-ri-FpZ" secondAttribute="trailing" constant="21" id="MUC-sS-oIQ"/>
+                <constraint firstItem="ceq-ri-FpZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="92" id="MaT-8f-Oog"/>
+                <constraint firstItem="meB-Gp-K3Y" firstAttribute="centerY" secondItem="nhf-yg-amE" secondAttribute="centerY" id="NWO-kf-AFU"/>
+                <constraint firstItem="5Gs-ga-Ls4" firstAttribute="leading" secondItem="ceq-ri-FpZ" secondAttribute="trailing" constant="10" id="Tdt-tF-w5S"/>
+                <constraint firstItem="nhf-yg-amE" firstAttribute="top" secondItem="ceq-ri-FpZ" secondAttribute="bottom" constant="30" id="UtW-rw-qcl"/>
+                <constraint firstItem="5Gs-ga-Ls4" firstAttribute="leading" secondItem="ceq-ri-FpZ" secondAttribute="trailing" constant="21" id="dQE-D6-jyC"/>
+                <constraint firstItem="5Gs-ga-Ls4" firstAttribute="centerX" secondItem="ceq-ri-FpZ" secondAttribute="centerX" id="iGN-wR-lMI"/>
+                <constraint firstAttribute="trailing" secondItem="meB-Gp-K3Y" secondAttribute="trailing" constant="10" id="mgM-be-JeR"/>
+                <constraint firstItem="5Gs-ga-Ls4" firstAttribute="centerY" secondItem="ceq-ri-FpZ" secondAttribute="centerY" id="r6e-kt-z5d"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="6ww-EM-8NR"/>
+                    <exclude reference="MUC-sS-oIQ"/>
+                    <exclude reference="Tdt-tF-w5S"/>
+                    <exclude reference="iGN-wR-lMI"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="289" y="232"/>
+        </view>
+    </objects>
+</document>

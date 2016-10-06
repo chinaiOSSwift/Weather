@@ -31,8 +31,22 @@ class CityModel: NSObject {
         city.code = dict["编码"] as! String
         return city
     }
-    
-    
 }
+
+class JokeTextModel: NSObject {
+    var ct:String!
+    var text:String!
+    var title:String!
+    // 通过一个字典构建一个对象
+    class func createModel(dic:[String:AnyObject]) -> JokeTextModel{
+        let joke = JokeTextModel()
+        joke.ct = dic["ct"] as! String
+        joke.text = dic["text"] as! String
+        joke.title = dic["title"] as! String
+        return joke
+    }
+}
+
+
 
 

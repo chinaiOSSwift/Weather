@@ -33,10 +33,19 @@ class ViewController: UIViewController {
     
     // MARK: - 生活指数
     lazy var leftIndexView:LifeIndexView = {
-        let view = LifeIndexView.init(frame: CGRectMake(0, self.todayView.mj_h + self.todayView.mj_y, SCREEN_W, (SCREEN_W / 4) * CGFloat(2)))
+        let view = LifeIndexView.init(frame: CGRectMake(0, self.todayView.mj_h + self.todayView.mj_y + 5, SCREEN_W, (SCREEN_W / 4) * CGFloat(2) + 30))
         view.backgroundColor = UIColor.clearColor()
+        view.delegate = self
         self.view.addSubview(view)
         return view
+    }()
+    
+    // MARK: - 未来天气
+    lazy var futureView:FutureView = {
+        let future = FutureView.init(frame: CGRectMake(0, self.leftIndexView.mj_y + self.leftIndexView.mj_h + 5, SCREEN_W, 170))
+        future.backgroundColor = UIColor.clearColor()
+        self.view.addSubview(future)
+        return future
     }()
     
     
@@ -46,7 +55,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.userInteractionEnabled = true
-        self.view.backgroundColor = UIColor.init(patternImage: UIImage.init(named: "backGround.jpg")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal))
+//        self.view.backgroundColor = UIColor.init(patternImage: UIImage.init(named: "backGround.png")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal))
+        self.view.backgroundColor = UIColor.init(red: 83 / 255.0, green: 146 / 255.0, blue: 199 / 255.0, alpha: 1.0)
         self.makeNAVLeftView()
     }
     
@@ -130,11 +140,24 @@ extension ViewController:passProNameDelegate{
     }
     
     func passRequestData(retData: [String : AnyObject]) {
-        print("得到的数据:\(retData)")
         self.makeTodayView((retData["today"] as! [String:AnyObject]))
         self.leftIndexView.dataArr = (retData["today"] as! [String:AnyObject])["index"] as! NSArray
+        self.futureView.forecastArr = (retData["forecast"] as! NSArray)
+        self.futureView.historyArr = (retData["history"] as! NSArray)
+        self.futureView.todayDic = (retData["today"] as! NSDictionary)
+        (self.futureView.viewWithTag(1012) as! UICollectionView).reloadData()
     }
     
+}
+
+// MARK: - LifeIndexView 协议方法 (跳转到对应的指数界面)
+extension ViewController:LifeIndexViewDelegate{
+    func gotoIndexView(index: Int, dic: [String : AnyObject]) {
+        let base = BaseIndexViewController()
+        base.navigationItem.title = dic["name"] as? String
+        base.dic = dic
+        self.navigationController?.pushViewController(base, animated: true)
+    }
 }
 
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC2B83641DA65C6300AEEAE7 /* JokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B83621DA65C6300AEEAE7 /* JokeCell.swift */; };
+		BC2B83651DA65C6300AEEAE7 /* JokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC2B83631DA65C6300AEEAE7 /* JokeCell.xib */; };
 		BC5124AE1D9CFD3D00B8E4AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5124AD1D9CFD3D00B8E4AC /* AppDelegate.swift */; };
 		BC5124B01D9CFD3D00B8E4AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5124AF1D9CFD3D00B8E4AC /* ViewController.swift */; };
 		BC5124B31D9CFD3D00B8E4AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5124B11D9CFD3D00B8E4AC /* Main.storyboard */; };
@@ -67,8 +69,6 @@
 		BC51256E1D9D602100B8E4AC /* MakeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51256D1D9D602100B8E4AC /* MakeModels.swift */; };
 		BC5125701D9D650F00B8E4AC /* ModelsNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51256F1D9D650F00B8E4AC /* ModelsNetWork.swift */; };
 		BC5125721D9DECA200B8E4AC /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = BC5125711D9DECA200B8E4AC /* city.json */; };
-		BC5126201D9E3B6D00B8E4AC /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51261F1D9E3B6D00B8E4AC /* CityView.swift */; };
-		BC5126231D9E55C500B8E4AC /* backGround.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC5126221D9E55C500B8E4AC /* backGround.jpg */; };
 		BC5126311D9E5C8700B8E4AC /* me.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5126251D9E5C8700B8E4AC /* me.png */; };
 		BC5126321D9E5C8700B8E4AC /* me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5126261D9E5C8700B8E4AC /* me@2x.png */; };
 		BC5126331D9E5C8700B8E4AC /* mea.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5126271D9E5C8700B8E4AC /* mea.png */; };
@@ -86,20 +86,30 @@
 		BC5126441D9E5D8800B8E4AC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5126431D9E5D8800B8E4AC /* SecondViewController.swift */; };
 		BC5126461D9E5E3600B8E4AC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5126451D9E5E3600B8E4AC /* TabBarController.swift */; };
 		BC5126481D9E637F00B8E4AC /* tab_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5126471D9E637F00B8E4AC /* tab_bg@2x.png */; };
-		BC51264A1D9E6CA800B8E4AC /* ProvinceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5126491D9E6CA800B8E4AC /* ProvinceView.swift */; };
 		BC51264C1DA50D4E00B8E4AC /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51264B1DA50D4E00B8E4AC /* TodayView.swift */; };
-		BC5126501DA5226B00B8E4AC /* LifeIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51264F1DA5226B00B8E4AC /* LifeIndexView.swift */; };
-		BC5126531DA5243500B8E4AC /* LiftIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5126511DA5243500B8E4AC /* LiftIndexCell.swift */; };
-		BC5126541DA5243500B8E4AC /* LiftIndexCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5126521DA5243500B8E4AC /* LiftIndexCell.xib */; };
 		BC51265B1DA52CB900B8E4AC /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5126551DA52CB900B8E4AC /* car.png */; };
 		BC51265C1DA52CB900B8E4AC /* clothes.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5126561DA52CB900B8E4AC /* clothes.png */; };
 		BC51265D1DA52CB900B8E4AC /* dry.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5126571DA52CB900B8E4AC /* dry.png */; };
 		BC51265E1DA52CB900B8E4AC /* healthIndex.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5126581DA52CB900B8E4AC /* healthIndex.png */; };
 		BC5126601DA52CB900B8E4AC /* sport.png in Resources */ = {isa = PBXBuildFile; fileRef = BC51265A1DA52CB900B8E4AC /* sport.png */; };
 		BC51268C1DA5319700B8E4AC /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = BC51268B1DA5319700B8E4AC /* sun.png */; };
+		BC51269C1DA5FE8B00B8E4AC /* BaseIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51269A1DA5FE8B00B8E4AC /* BaseIndexViewController.swift */; };
+		BC51269D1DA5FE8B00B8E4AC /* BaseIndexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC51269B1DA5FE8B00B8E4AC /* BaseIndexViewController.xib */; };
+		BC51269F1DA5FF7E00B8E4AC /* indexBG.png in Resources */ = {isa = PBXBuildFile; fileRef = BC51269E1DA5FF7E00B8E4AC /* indexBG.png */; };
+		BC5126A11DA60A1900B8E4AC /* backGround.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5126A01DA60A1900B8E4AC /* backGround.png */; };
+		BC5126B01DA6119600B8E4AC /* LifeIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5126A71DA6119600B8E4AC /* LifeIndexView.swift */; };
+		BC5126B11DA6119600B8E4AC /* LiftIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5126A81DA6119600B8E4AC /* LiftIndexCell.swift */; };
+		BC5126B21DA6119600B8E4AC /* LiftIndexCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5126A91DA6119600B8E4AC /* LiftIndexCell.xib */; };
+		BC5126B31DA6119600B8E4AC /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5126AB1DA6119600B8E4AC /* CityView.swift */; };
+		BC5126B41DA6119600B8E4AC /* ProvinceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5126AC1DA6119600B8E4AC /* ProvinceView.swift */; };
+		BC5126B51DA6119600B8E4AC /* FutureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5126AE1DA6119600B8E4AC /* FutureCell.swift */; };
+		BC5126B61DA6119600B8E4AC /* FutureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5126AF1DA6119600B8E4AC /* FutureCell.xib */; };
+		BC5126B81DA611F400B8E4AC /* FutureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5126B71DA611F400B8E4AC /* FutureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC2B83621DA65C6300AEEAE7 /* JokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeCell.swift; sourceTree = "<group>"; };
+		BC2B83631DA65C6300AEEAE7 /* JokeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JokeCell.xib; sourceTree = "<group>"; };
 		BC5124AA1D9CFD3D00B8E4AC /* weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5124AD1D9CFD3D00B8E4AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC5124AF1D9CFD3D00B8E4AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -214,8 +224,6 @@
 		BC51256D1D9D602100B8E4AC /* MakeModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeModels.swift; sourceTree = "<group>"; };
 		BC51256F1D9D650F00B8E4AC /* ModelsNetWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelsNetWork.swift; sourceTree = "<group>"; };
 		BC5125711D9DECA200B8E4AC /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = city.json; path = ../city.json; sourceTree = "<group>"; };
-		BC51261F1D9E3B6D00B8E4AC /* CityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
-		BC5126221D9E55C500B8E4AC /* backGround.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backGround.jpg; sourceTree = "<group>"; };
 		BC5126251D9E5C8700B8E4AC /* me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me.png; sourceTree = "<group>"; };
 		BC5126261D9E5C8700B8E4AC /* me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me@2x.png"; sourceTree = "<group>"; };
 		BC5126271D9E5C8700B8E4AC /* mea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mea.png; sourceTree = "<group>"; };
@@ -233,17 +241,25 @@
 		BC5126431D9E5D8800B8E4AC /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		BC5126451D9E5E3600B8E4AC /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BC5126471D9E637F00B8E4AC /* tab_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_bg@2x.png"; sourceTree = "<group>"; };
-		BC5126491D9E6CA800B8E4AC /* ProvinceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceView.swift; sourceTree = "<group>"; };
 		BC51264B1DA50D4E00B8E4AC /* TodayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
-		BC51264F1DA5226B00B8E4AC /* LifeIndexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeIndexView.swift; sourceTree = "<group>"; };
-		BC5126511DA5243500B8E4AC /* LiftIndexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiftIndexCell.swift; sourceTree = "<group>"; };
-		BC5126521DA5243500B8E4AC /* LiftIndexCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiftIndexCell.xib; sourceTree = "<group>"; };
 		BC5126551DA52CB900B8E4AC /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
 		BC5126561DA52CB900B8E4AC /* clothes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clothes.png; sourceTree = "<group>"; };
 		BC5126571DA52CB900B8E4AC /* dry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dry.png; sourceTree = "<group>"; };
 		BC5126581DA52CB900B8E4AC /* healthIndex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = healthIndex.png; sourceTree = "<group>"; };
 		BC51265A1DA52CB900B8E4AC /* sport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sport.png; sourceTree = "<group>"; };
 		BC51268B1DA5319700B8E4AC /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
+		BC51269A1DA5FE8B00B8E4AC /* BaseIndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseIndexViewController.swift; sourceTree = "<group>"; };
+		BC51269B1DA5FE8B00B8E4AC /* BaseIndexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseIndexViewController.xib; sourceTree = "<group>"; };
+		BC51269E1DA5FF7E00B8E4AC /* indexBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indexBG.png; sourceTree = "<group>"; };
+		BC5126A01DA60A1900B8E4AC /* backGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backGround.png; sourceTree = "<group>"; };
+		BC5126A71DA6119600B8E4AC /* LifeIndexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeIndexView.swift; sourceTree = "<group>"; };
+		BC5126A81DA6119600B8E4AC /* LiftIndexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiftIndexCell.swift; sourceTree = "<group>"; };
+		BC5126A91DA6119600B8E4AC /* LiftIndexCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiftIndexCell.xib; sourceTree = "<group>"; };
+		BC5126AB1DA6119600B8E4AC /* CityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
+		BC5126AC1DA6119600B8E4AC /* ProvinceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceView.swift; sourceTree = "<group>"; };
+		BC5126AE1DA6119600B8E4AC /* FutureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureCell.swift; sourceTree = "<group>"; };
+		BC5126AF1DA6119600B8E4AC /* FutureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FutureCell.xib; sourceTree = "<group>"; };
+		BC5126B71DA611F400B8E4AC /* FutureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,9 +273,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC2B83611DA65BE600AEEAE7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC2B83621DA65C6300AEEAE7 /* JokeCell.swift */,
+				BC2B83631DA65C6300AEEAE7 /* JokeCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BC5124A11D9CFD3D00B8E4AC = {
 			isa = PBXGroup;
 			children = (
+				BC51268D1DA5F7ED00B8E4AC /* Controllers */,
 				BC51263F1D9E5D6200B8E4AC /* Me */,
 				BC5126401D9E5D6200B8E4AC /* Second */,
 				BC5126211D9E557300B8E4AC /* Resource */,
@@ -546,12 +572,10 @@
 		BC51261C1D9E288A00B8E4AC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BC51261F1D9E3B6D00B8E4AC /* CityView.swift */,
-				BC5126491D9E6CA800B8E4AC /* ProvinceView.swift */,
+				BC5126A61DA6119600B8E4AC /* 生活指数 */,
+				BC5126AA1DA6119600B8E4AC /* 省市视图 */,
+				BC5126AD1DA6119600B8E4AC /* 未来天气 */,
 				BC51264B1DA50D4E00B8E4AC /* TodayView.swift */,
-				BC51264F1DA5226B00B8E4AC /* LifeIndexView.swift */,
-				BC5126511DA5243500B8E4AC /* LiftIndexCell.swift */,
-				BC5126521DA5243500B8E4AC /* LiftIndexCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -559,6 +583,8 @@
 		BC5126211D9E557300B8E4AC /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				BC5126A01DA60A1900B8E4AC /* backGround.png */,
+				BC51269E1DA5FF7E00B8E4AC /* indexBG.png */,
 				BC51268B1DA5319700B8E4AC /* sun.png */,
 				BC5126551DA52CB900B8E4AC /* car.png */,
 				BC5126561DA52CB900B8E4AC /* clothes.png */,
@@ -567,7 +593,6 @@
 				BC51265A1DA52CB900B8E4AC /* sport.png */,
 				BC5126471D9E637F00B8E4AC /* tab_bg@2x.png */,
 				BC5126241D9E5C8700B8E4AC /* icon */,
-				BC5126221D9E55C500B8E4AC /* backGround.jpg */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -602,9 +627,48 @@
 		BC5126401D9E5D6200B8E4AC /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				BC2B83611DA65BE600AEEAE7 /* View */,
 				BC5126431D9E5D8800B8E4AC /* SecondViewController.swift */,
 			);
 			path = Second;
+			sourceTree = "<group>";
+		};
+		BC51268D1DA5F7ED00B8E4AC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC51269A1DA5FE8B00B8E4AC /* BaseIndexViewController.swift */,
+				BC51269B1DA5FE8B00B8E4AC /* BaseIndexViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BC5126A61DA6119600B8E4AC /* 生活指数 */ = {
+			isa = PBXGroup;
+			children = (
+				BC5126A71DA6119600B8E4AC /* LifeIndexView.swift */,
+				BC5126A81DA6119600B8E4AC /* LiftIndexCell.swift */,
+				BC5126A91DA6119600B8E4AC /* LiftIndexCell.xib */,
+			);
+			path = "生活指数";
+			sourceTree = "<group>";
+		};
+		BC5126AA1DA6119600B8E4AC /* 省市视图 */ = {
+			isa = PBXGroup;
+			children = (
+				BC5126AB1DA6119600B8E4AC /* CityView.swift */,
+				BC5126AC1DA6119600B8E4AC /* ProvinceView.swift */,
+			);
+			path = "省市视图";
+			sourceTree = "<group>";
+		};
+		BC5126AD1DA6119600B8E4AC /* 未来天气 */ = {
+			isa = PBXGroup;
+			children = (
+				BC5126AE1DA6119600B8E4AC /* FutureCell.swift */,
+				BC5126AF1DA6119600B8E4AC /* FutureCell.xib */,
+				BC5126B71DA611F400B8E4AC /* FutureView.swift */,
+			);
+			path = "未来天气";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -671,11 +735,14 @@
 				BC5124B81D9CFD3D00B8E4AC /* LaunchScreen.storyboard in Resources */,
 				BC5126381D9E5C8700B8E4AC /* seconda@2x.png in Resources */,
 				BC5125721D9DECA200B8E4AC /* city.json in Resources */,
-				BC5126541DA5243500B8E4AC /* LiftIndexCell.xib in Resources */,
 				BC51263E1D9E5CB800B8E4AC /* TabBarList.plist in Resources */,
 				BC5124B51D9CFD3D00B8E4AC /* Assets.xcassets in Resources */,
+				BC5126A11DA60A1900B8E4AC /* backGround.png in Resources */,
 				BC51265D1DA52CB900B8E4AC /* dry.png in Resources */,
+				BC51269D1DA5FE8B00B8E4AC /* BaseIndexViewController.xib in Resources */,
+				BC2B83651DA65C6300AEEAE7 /* JokeCell.xib in Resources */,
 				BC51265B1DA52CB900B8E4AC /* car.png in Resources */,
+				BC5126B21DA6119600B8E4AC /* LiftIndexCell.xib in Resources */,
 				BC5125551D9D03D100B8E4AC /* MJRefresh.bundle in Resources */,
 				BC5126351D9E5C8700B8E4AC /* second.png in Resources */,
 				BC5124B31D9CFD3D00B8E4AC /* Main.storyboard in Resources */,
@@ -685,11 +752,12 @@
 				BC5126391D9E5C8700B8E4AC /* weather.png in Resources */,
 				BC51265E1DA52CB900B8E4AC /* healthIndex.png in Resources */,
 				BC5126601DA52CB900B8E4AC /* sport.png in Resources */,
+				BC5126B61DA6119600B8E4AC /* FutureCell.xib in Resources */,
 				BC51263C1D9E5C8700B8E4AC /* weathera@2x.png in Resources */,
 				BC51263B1D9E5C8700B8E4AC /* weathera.png in Resources */,
 				BC51263A1D9E5C8700B8E4AC /* weather@2x.png in Resources */,
+				BC51269F1DA5FF7E00B8E4AC /* indexBG.png in Resources */,
 				BC5126371D9E5C8700B8E4AC /* seconda.png in Resources */,
-				BC5126231D9E55C500B8E4AC /* backGround.jpg in Resources */,
 				BC5126361D9E5C8700B8E4AC /* second@2x.png in Resources */,
 				BC5126311D9E5C8700B8E4AC /* me.png in Resources */,
 			);
@@ -705,17 +773,19 @@
 				BC5125691D9D03D100B8E4AC /* UIImageView+HighlightedWebCache.m in Sources */,
 				BC5125411D9D03D100B8E4AC /* JSONHTTPClient.m in Sources */,
 				BC5126461D9E5E3600B8E4AC /* TabBarController.swift in Sources */,
+				BC5126B51DA6119600B8E4AC /* FutureCell.swift in Sources */,
 				BC5126441D9E5D8800B8E4AC /* SecondViewController.swift in Sources */,
 				BC51253B1D9D03D100B8E4AC /* CycleImageCell.m in Sources */,
 				BC51253D1D9D03D100B8E4AC /* JSONModel.m in Sources */,
 				BC51253E1D9D03D100B8E4AC /* JSONModelClassProperty.m in Sources */,
 				BC51264C1DA50D4E00B8E4AC /* TodayView.swift in Sources */,
-				BC5126201D9E3B6D00B8E4AC /* CityView.swift in Sources */,
 				BC5125431D9D03D100B8E4AC /* JSONKeyMapper.m in Sources */,
 				BC51255B1D9D03D100B8E4AC /* UIViewController+MLTransition.m in Sources */,
 				BC51254D1D9D03D100B8E4AC /* MJRefreshAutoNormalFooter.m in Sources */,
+				BC5126B11DA6119600B8E4AC /* LiftIndexCell.swift in Sources */,
 				BC5125531D9D03D100B8E4AC /* MJRefreshNormalHeader.m in Sources */,
 				BC51253A1D9D03D100B8E4AC /* MD5Tool.swift in Sources */,
+				BC5126B41DA6119600B8E4AC /* ProvinceView.swift in Sources */,
 				BC51253C1D9D03D100B8E4AC /* XTADScrollView.m in Sources */,
 				BC5125461D9D03D100B8E4AC /* MBProgressHUD.m in Sources */,
 				BC5125581D9D03D100B8E4AC /* UIScrollView+MJRefresh.m in Sources */,
@@ -742,28 +812,30 @@
 				BC5125511D9D03D100B8E4AC /* MJRefreshBackStateFooter.m in Sources */,
 				BC5125521D9D03D100B8E4AC /* MJRefreshGifHeader.m in Sources */,
 				BC51254F1D9D03D100B8E4AC /* MJRefreshBackGifFooter.m in Sources */,
-				BC5126501DA5226B00B8E4AC /* LifeIndexView.swift in Sources */,
 				BC5125671D9D03D100B8E4AC /* UIImage+MultiFormat.m in Sources */,
+				BC51269C1DA5FE8B00B8E4AC /* BaseIndexViewController.swift in Sources */,
 				BC5125701D9D650F00B8E4AC /* ModelsNetWork.swift in Sources */,
 				BC5125601D9D03D100B8E4AC /* SDWebImageDecoder.m in Sources */,
 				BC5125561D9D03D100B8E4AC /* MJRefreshConst.m in Sources */,
 				BC5125451D9D03D100B8E4AC /* HDManager.m in Sources */,
+				BC5126B01DA6119600B8E4AC /* LifeIndexView.swift in Sources */,
 				BC5125401D9D03D100B8E4AC /* JSONAPI.m in Sources */,
 				BC5125471D9D03D100B8E4AC /* MJRefreshAutoFooter.m in Sources */,
+				BC2B83641DA65C6300AEEAE7 /* JokeCell.swift in Sources */,
 				BC5125651D9D03D100B8E4AC /* UIButton+WebCache.m in Sources */,
 				BC5125381D9D03D100B8E4AC /* BaseRequest.swift in Sources */,
 				BC5125641D9D03D100B8E4AC /* SDWebImagePrefetcher.m in Sources */,
 				BC51256B1D9D03D100B8E4AC /* UIView+WebCacheOperation.m in Sources */,
-				BC5126531DA5243500B8E4AC /* LiftIndexCell.swift in Sources */,
 				BC51255A1D9D03D100B8E4AC /* MLTransitionAnimation.m in Sources */,
 				BC51254A1D9D03D100B8E4AC /* MJRefreshFooter.m in Sources */,
+				BC5126B81DA611F400B8E4AC /* FutureView.swift in Sources */,
 				BC5125591D9D03D100B8E4AC /* UIView+MJExtension.m in Sources */,
 				BC5125661D9D03D100B8E4AC /* UIImage+GIF.m in Sources */,
 				BC5125571D9D03D100B8E4AC /* UIScrollView+MJExtension.m in Sources */,
 				BC51254B1D9D03D100B8E4AC /* MJRefreshHeader.m in Sources */,
 				BC5125541D9D03D100B8E4AC /* MJRefreshStateHeader.m in Sources */,
 				BC51255F1D9D03D100B8E4AC /* SDWebImageCompat.m in Sources */,
-				BC51264A1D9E6CA800B8E4AC /* ProvinceView.swift in Sources */,
+				BC5126B31DA6119600B8E4AC /* CityView.swift in Sources */,
 				BC51255E1D9D03D100B8E4AC /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

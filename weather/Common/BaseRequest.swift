@@ -95,8 +95,8 @@ class BaseRequest{
         req.addValue(apikey, forHTTPHeaderField: "apikey")
         NSURLConnection.sendAsynchronousRequest(req, queue: NSOperationQueue.mainQueue()) {
             (response, data, error) -> Void in
-            let res = response as! NSHTTPURLResponse
-            print(res.statusCode)
+//            let res = response as! NSHTTPURLResponse
+//            print(res.statusCode)
             if let e = error{
                 print("请求失败\(e)")
             }
@@ -111,12 +111,5 @@ class BaseRequest{
             }
         }
     }
-    
-    
-    
-    
-    
-    
-
     
 }
