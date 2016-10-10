@@ -23,7 +23,13 @@ class FutureCell: UICollectionViewCell {
     func customCellWith(dic:[String:AnyObject]) -> Void{
         weakL.text = dic["week"] as? String
         let dateArr = (dic["date"] as? String)?.componentsSeparatedByString("-")
-        dateL.text = String.init(format: "%@-%@", (dateArr![1]),(dateArr![2]))
+        
+        if dateArr!.count >= 3{
+            dateL.text = String.init(format: "%@-%@", (dateArr![1]),(dateArr![2]))
+        }else{
+            dateL.text = dic["date"] as? String
+        }
+        
         typeL.text = dic["type"] as? String
         fengxiangL.text = dic["fengxiang"] as? String
         fengliL.text = dic["fengli"] as? String

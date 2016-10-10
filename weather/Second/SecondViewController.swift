@@ -78,7 +78,8 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
         let model = self.dataArr[indexPath.row] as! JokeTextModel
         cell.titleL.text = model.title
         cell.textL.text = "    " + model.text
-        cell.timeL.text = model.ct
+        let timeArr = (model.ct).componentsSeparatedByString(".")
+        cell.timeL.text = String.init(format: "%@", timeArr[0])
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

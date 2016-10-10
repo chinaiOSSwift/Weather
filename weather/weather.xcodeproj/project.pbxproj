@@ -105,6 +105,11 @@
 		BC5126B51DA6119600B8E4AC /* FutureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5126AE1DA6119600B8E4AC /* FutureCell.swift */; };
 		BC5126B61DA6119600B8E4AC /* FutureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5126AF1DA6119600B8E4AC /* FutureCell.xib */; };
 		BC5126B81DA611F400B8E4AC /* FutureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5126B71DA611F400B8E4AC /* FutureView.swift */; };
+		BCF2239A1DA92E3000A03EBE /* TodayOrTomorrowCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF223981DA92E3000A03EBE /* TodayOrTomorrowCellCollectionViewCell.swift */; };
+		BCF2239B1DA92E3000A03EBE /* TodayOrTomorrowCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF223991DA92E3000A03EBE /* TodayOrTomorrowCellCollectionViewCell.xib */; };
+		BCF2239E1DA933C500A03EBE /* WeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF2239C1DA933C500A03EBE /* WeekCell.swift */; };
+		BCF2239F1DA933C500A03EBE /* WeekCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF2239D1DA933C500A03EBE /* WeekCell.xib */; };
+		BCF223BC1DAA5AA600A03EBE /* MonthModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF223BB1DAA5AA600A03EBE /* MonthModelCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -260,6 +265,11 @@
 		BC5126AE1DA6119600B8E4AC /* FutureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureCell.swift; sourceTree = "<group>"; };
 		BC5126AF1DA6119600B8E4AC /* FutureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FutureCell.xib; sourceTree = "<group>"; };
 		BC5126B71DA611F400B8E4AC /* FutureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureView.swift; sourceTree = "<group>"; };
+		BCF223981DA92E3000A03EBE /* TodayOrTomorrowCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayOrTomorrowCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		BCF223991DA92E3000A03EBE /* TodayOrTomorrowCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayOrTomorrowCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		BCF2239C1DA933C500A03EBE /* WeekCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekCell.swift; sourceTree = "<group>"; };
+		BCF2239D1DA933C500A03EBE /* WeekCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekCell.xib; sourceTree = "<group>"; };
+		BCF223BB1DAA5AA600A03EBE /* MonthModelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthModelCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -619,6 +629,7 @@
 		BC51263F1D9E5D6200B8E4AC /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				BCF223971DA9104B00A03EBE /* View */,
 				BC5126411D9E5D7600B8E4AC /* MeViewController.swift */,
 			);
 			path = Me;
@@ -669,6 +680,18 @@
 				BC5126B71DA611F400B8E4AC /* FutureView.swift */,
 			);
 			path = "未来天气";
+			sourceTree = "<group>";
+		};
+		BCF223971DA9104B00A03EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCF223981DA92E3000A03EBE /* TodayOrTomorrowCellCollectionViewCell.swift */,
+				BCF223991DA92E3000A03EBE /* TodayOrTomorrowCellCollectionViewCell.xib */,
+				BCF2239C1DA933C500A03EBE /* WeekCell.swift */,
+				BCF2239D1DA933C500A03EBE /* WeekCell.xib */,
+				BCF223BB1DAA5AA600A03EBE /* MonthModelCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -741,6 +764,7 @@
 				BC51265D1DA52CB900B8E4AC /* dry.png in Resources */,
 				BC51269D1DA5FE8B00B8E4AC /* BaseIndexViewController.xib in Resources */,
 				BC2B83651DA65C6300AEEAE7 /* JokeCell.xib in Resources */,
+				BCF2239B1DA92E3000A03EBE /* TodayOrTomorrowCellCollectionViewCell.xib in Resources */,
 				BC51265B1DA52CB900B8E4AC /* car.png in Resources */,
 				BC5126B21DA6119600B8E4AC /* LiftIndexCell.xib in Resources */,
 				BC5125551D9D03D100B8E4AC /* MJRefresh.bundle in Resources */,
@@ -758,6 +782,7 @@
 				BC51263A1D9E5C8700B8E4AC /* weather@2x.png in Resources */,
 				BC51269F1DA5FF7E00B8E4AC /* indexBG.png in Resources */,
 				BC5126371D9E5C8700B8E4AC /* seconda.png in Resources */,
+				BCF2239F1DA933C500A03EBE /* WeekCell.xib in Resources */,
 				BC5126361D9E5C8700B8E4AC /* second@2x.png in Resources */,
 				BC5126311D9E5C8700B8E4AC /* me.png in Resources */,
 			);
@@ -775,6 +800,7 @@
 				BC5126461D9E5E3600B8E4AC /* TabBarController.swift in Sources */,
 				BC5126B51DA6119600B8E4AC /* FutureCell.swift in Sources */,
 				BC5126441D9E5D8800B8E4AC /* SecondViewController.swift in Sources */,
+				BCF223BC1DAA5AA600A03EBE /* MonthModelCell.swift in Sources */,
 				BC51253B1D9D03D100B8E4AC /* CycleImageCell.m in Sources */,
 				BC51253D1D9D03D100B8E4AC /* JSONModel.m in Sources */,
 				BC51253E1D9D03D100B8E4AC /* JSONModelClassProperty.m in Sources */,
@@ -816,12 +842,14 @@
 				BC51269C1DA5FE8B00B8E4AC /* BaseIndexViewController.swift in Sources */,
 				BC5125701D9D650F00B8E4AC /* ModelsNetWork.swift in Sources */,
 				BC5125601D9D03D100B8E4AC /* SDWebImageDecoder.m in Sources */,
+				BCF2239E1DA933C500A03EBE /* WeekCell.swift in Sources */,
 				BC5125561D9D03D100B8E4AC /* MJRefreshConst.m in Sources */,
 				BC5125451D9D03D100B8E4AC /* HDManager.m in Sources */,
 				BC5126B01DA6119600B8E4AC /* LifeIndexView.swift in Sources */,
 				BC5125401D9D03D100B8E4AC /* JSONAPI.m in Sources */,
 				BC5125471D9D03D100B8E4AC /* MJRefreshAutoFooter.m in Sources */,
 				BC2B83641DA65C6300AEEAE7 /* JokeCell.swift in Sources */,
+				BCF2239A1DA92E3000A03EBE /* TodayOrTomorrowCellCollectionViewCell.swift in Sources */,
 				BC5125651D9D03D100B8E4AC /* UIButton+WebCache.m in Sources */,
 				BC5125381D9D03D100B8E4AC /* BaseRequest.swift in Sources */,
 				BC5125641D9D03D100B8E4AC /* SDWebImagePrefetcher.m in Sources */,

@@ -76,11 +76,88 @@ extension JokeTextModel{
     
 }
 
+// MARK: - 运势网络请求
+extension LuckModel{
+    class func requestData(httpUrl: String, httpArg: String,callBack:(model:LuckModel?, error:NSError?)->Void) -> Void {
+        let req = NSMutableURLRequest(URL: NSURL(string: httpUrl + "?" + httpArg)!)
+        req.timeoutInterval = 6
+        req.HTTPMethod = "GET"
+        req.addValue(apikey, forHTTPHeaderField: "apikey")
+        NSURLConnection.sendAsynchronousRequest(req, queue: NSOperationQueue.mainQueue()) {
+            (response, data, error) -> Void in
+            if let d = data {
+                //let content = NSString(data: d, encoding: NSUTF8StringEncoding)
+                //print(content)
+                let dic = try! NSJSONSerialization.JSONObjectWithData(d, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                let model = LuckModel.makeModel(dic)
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    callBack(model: model, error: nil)
+                })
+                
+            }else{
+                dispatch_async(dispatch_get_main_queue(), {
+                    callBack(model: nil, error: error)
+                })
+            }
+        }
+    }
+}
+// 周模型
+extension weekModel{
+    class func requestData(httpUrl: String, httpArg: String,callBack:(model:weekModel?, error:NSError?)->Void) -> Void {
+        let req = NSMutableURLRequest(URL: NSURL(string: httpUrl + "?" + httpArg)!)
+        req.timeoutInterval = 6
+        req.HTTPMethod = "GET"
+        req.addValue(apikey, forHTTPHeaderField: "apikey")
+        NSURLConnection.sendAsynchronousRequest(req, queue: NSOperationQueue.mainQueue()) {
+            (response, data, error) -> Void in
+            if let d = data {
+                //let content = NSString(data: d, encoding: NSUTF8StringEncoding)
+                //print(content)
+                let dic = try! NSJSONSerialization.JSONObjectWithData(d, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                let model = weekModel.makeModel(dic)
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    callBack(model: model, error: nil)
+                })
+                
+            }else{
+                dispatch_async(dispatch_get_main_queue(), {
+                    callBack(model: nil, error: error)
+                })
+            }
+        }
+    }
+}
 
-
-
-
-
+// 月模型
+extension MonthModel{
+    class func requestData(httpUrl: String, httpArg: String,callBack:(model:MonthModel?, error:NSError?)->Void) -> Void {
+        let req = NSMutableURLRequest(URL: NSURL(string: httpUrl + "?" + httpArg)!)
+        req.timeoutInterval = 6
+        req.HTTPMethod = "GET"
+        req.addValue(apikey, forHTTPHeaderField: "apikey")
+        NSURLConnection.sendAsynchronousRequest(req, queue: NSOperationQueue.mainQueue()) {
+            (response, data, error) -> Void in
+            if let d = data {
+                //let content = NSString(data: d, encoding: NSUTF8StringEncoding)
+                //print(content)
+                let dic = try! NSJSONSerialization.JSONObjectWithData(d, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                let model = MonthModel.makeModel(dic)
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    callBack(model: model, error: nil)
+                })
+                
+            }else{
+                dispatch_async(dispatch_get_main_queue(), {
+                    callBack(model: nil, error: error)
+                })
+            }
+        }
+    }
+}
 
 
 

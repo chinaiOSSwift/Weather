@@ -18,6 +18,8 @@ let SCREEN_W = UIScreen.mainScreen().bounds.size.width
 //屏幕高
 let SCREEN_H = UIScreen.mainScreen().bounds.size.height
 
+// 颜色
+let contentColor:UIColor = UIColor.init(red: 83 / 255.0, green: 146 / 255.0, blue: 199 / 255.0, alpha: 1.0)
 
 
 

@@ -26,7 +26,7 @@ class BaseRequest{
         request.timeoutInterval = 6
         let dataTask = session.dataTaskWithRequest(request) { (data, response, error) in
             
-//            let res:NSHTTPURLResponse = response as! NSHTTPURLResponse
+            //            let res:NSHTTPURLResponse = response as! NSHTTPURLResponse
             if data != nil
             {
                 callBack(data:data,error:nil)
@@ -74,9 +74,9 @@ class BaseRequest{
             paraStr.deleteCharactersInRange(NSMakeRange(paraStr.length - 1, 1))
         }
         //将URL中的特殊字符进行转吗
-//        paraStr.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
+        //        paraStr.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
         //移除转码
-//        paraStr.stringByRemovingPercentEncoding
+        //        paraStr.stringByRemovingPercentEncoding
         return String(paraStr)
     }
     
@@ -88,26 +88,43 @@ class BaseRequest{
     //MARK: - 根据城市code 获取天气参数
     
     class func  requestWeatherData(httpUrl: String, httpArg: String,callBack:(retData:[String:AnyObject]?)->Void) {
-//        print("httpUrl: \(httpUrl) httpArg = \(httpArg)")
+        //        print("httpUrl: \(httpUrl) httpArg = \(httpArg)")
         let req = NSMutableURLRequest(URL: NSURL(string: httpUrl + "?" + httpArg)!)
         req.timeoutInterval = 6
         req.HTTPMethod = "GET"
         req.addValue(apikey, forHTTPHeaderField: "apikey")
         NSURLConnection.sendAsynchronousRequest(req, queue: NSOperationQueue.mainQueue()) {
             (response, data, error) -> Void in
-//            let res = response as! NSHTTPURLResponse
-//            print(res.statusCode)
+            //            let res = response as! NSHTTPURLResponse
+            //            print(res.statusCode)
             if let e = error{
                 print("请求失败\(e)")
             }
             if let d = data {
-//                let content = NSString(data: d, encoding: NSUTF8StringEncoding)
-//                print(content)
+                //let content = NSString(data: d, encoding: NSUTF8StringEncoding)
+                //print(content)
                 let dic = try! NSJSONSerialization.JSONObjectWithData(d, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                callBack(retData: (dic["retData"] as! [String:AnyObject]))
+                if (dic["retData"] as? String) != "数据查询异常!"{
+                    dispatch_async(dispatch_get_main_queue(), {
+                        callBack(retData: (dic["retData"] as! [String:AnyObject]))
+                    })
+                }else{
+                    print("数据有误")
+                    /*
+                     let ac = UIAlertController.init(title: "⚠️", message: "数据查询异常!", preferredStyle: UIAlertControllerStyle.Alert)
+                     let action = UIAlertAction.init(title: "确定", style: UIAlertActionStyle.Default, handler: { (action) in
+                     
+                     })
+                     ac.addAction(action)
+                     self
+                     */
+                }
                 
             }else{
-                callBack(retData: nil)
+                print("数据有误")
+                dispatch_async(dispatch_get_main_queue(), {
+                    callBack(retData: nil)
+                })
             }
         }
     }

@@ -55,8 +55,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.userInteractionEnabled = true
-//        self.view.backgroundColor = UIColor.init(patternImage: UIImage.init(named: "backGround.png")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal))
-        self.view.backgroundColor = UIColor.init(red: 83 / 255.0, green: 146 / 255.0, blue: 199 / 255.0, alpha: 1.0)
+        //        self.view.backgroundColor = UIColor.init(patternImage: UIImage.init(named: "backGround.png")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal))
+        self.view.backgroundColor = contentColor
         self.makeNAVLeftView()
     }
     
@@ -115,10 +115,14 @@ class ViewController: UIViewController {
     // MARK: - 今天天气状况
     func makeTodayView(dic:[String:AnyObject]) -> Void {
         self.todayView.curTempL.text = dic["curTemp"] as? String
-        self.todayView.typeL.text = (dic["type"] as! String)
-        self.todayView.fengliL.text =  (dic["fengli"] as! String)
-        self.todayView.fengxiangL.text = (dic["fengxiang"] as! String)
-        self.todayView.heightAndLowL.text = "    " + ((dic["lowtemp"] as! String) + "~" + (dic["hightemp"] as! String))
+        self.todayView.typeL.text = (dic["type"] as? String)
+        self.todayView.fengliL.text =  (dic["fengli"] as? String)
+        self.todayView.fengxiangL.text = (dic["fengxiang"] as? String)
+        if (dic["lowtemp"] as? String == nil) || ((dic["hightemp"] as? String) == nil) {
+            
+        } else {
+            self.todayView.heightAndLowL.text = String.init(format: "%@%@%@", "    ",(dic["lowtemp"] as! String),(dic["hightemp"] as! String))
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -141,11 +145,13 @@ extension ViewController:passProNameDelegate{
     
     func passRequestData(retData: [String : AnyObject]) {
         self.makeTodayView((retData["today"] as! [String:AnyObject]))
-        self.leftIndexView.dataArr = (retData["today"] as! [String:AnyObject])["index"] as! NSArray
-        self.futureView.forecastArr = (retData["forecast"] as! NSArray)
-        self.futureView.historyArr = (retData["history"] as! NSArray)
-        self.futureView.todayDic = (retData["today"] as! NSDictionary)
-        (self.futureView.viewWithTag(1012) as! UICollectionView).reloadData()
+        if (retData["history"] as? NSArray)?.count != 0{
+            self.leftIndexView.dataArr = (retData["today"] as! [String:AnyObject])["index"] as! NSArray
+            self.futureView.forecastArr = (retData["forecast"] as! NSArray)
+            self.futureView.historyArr = (retData["history"] as! NSArray)
+            self.futureView.todayDic = (retData["today"] as! NSDictionary)
+            (self.futureView.viewWithTag(1012) as! UICollectionView).reloadData()
+        }
     }
     
 }
